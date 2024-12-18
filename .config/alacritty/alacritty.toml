@@ -4,8 +4,18 @@ live_config_reload=true
 [window]
 opacity=0.9
 padding={x=2,y=2}
+decorations = "None"
+
+[scrolling]
+history=10000
+multiplier=5
 
 [font]
 normal={family="JetBrainsMono Nerd Font Mono",style="Regular"}
 size=10
 
+[selection]
+save_to_clipboard=true
+
+[terminal]
+osc52="CopyPaste"
