@@ -2,9 +2,10 @@
 live_config_reload=true
 
 [window]
-opacity=0.9
+opacity=0.8
 padding={x=2,y=2}
 decorations = "None"
+blur=true
 
 [scrolling]
 history=10000
