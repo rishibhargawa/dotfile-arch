@@ -2,7 +2,7 @@ configuration {
 	font: "JetBrains Mono 12";
 	show-icons: true;
 	terminal: "alacritty";
-	icon-theme: epapirus ;
+	icon-theme: "epapirus" ;
 	disable-history: false;
   timeout {
       action: "kb-cancel";
