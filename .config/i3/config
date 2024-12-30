@@ -2,7 +2,7 @@
 # https://github.com/rishibhargawa/dotfile-arch/.config/i3/config
 
 #MOD-KEY
-set $mod Mod1
+set $mod Mod4
 
 #Font-Render
 font pango:JetBrainsMono Nerd Font Mono 8
@@ -14,14 +14,22 @@ exec --no-startup-id dex --autostart --environment i3
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id ~/.fehbg
-exec_always --no-startup-id picom -b
-
+exec_always libinput-gestures-setup start
+exec_always --no-startup-id picom
+exec_always easyeffects --gapplication-service
+exec_always /home/rishi/.fehbg
 
 # Volume-Keybinds
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Playerctl Keybinds
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioStop exec --no-startup-id playerctl stop
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Brightness-keybinds
 bindsym XF86MonBrightnessUp exec brightnessctl s +10%
@@ -121,6 +129,5 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-gaps inner 2px
-gaps outer 2px
+gaps inner 1px
 for_window [class="^.*"] border pixel 1
