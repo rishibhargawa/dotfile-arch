@@ -105,6 +105,13 @@ bindsym $mod+Shift+3 move container to workspace number $ws3
 bindsym $mod+Shift+4 move container to workspace number $ws4
 bindsym $mod+Shift+5 move container to workspace number $ws5
 
+# Specific-Workspaces
+assign [class="Alacritty"] 3
+assign [class="chromium"] 2
+assign [class="firefox"] 2
+assign [class="Code"] 4
+assign [class="Spotify"] 5
+assign [class="easyeffects"] 5
 
 # Reload-Config
 bindsym $mod+Shift+c reload
