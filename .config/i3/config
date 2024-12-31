@@ -5,10 +5,13 @@
 set $mod Mod4
 
 #Font-Render
-font pango:JetBrainsMono Nerd Font Mono 8
+font pango:Fira Mono 8
 
 #XDG-AutoStart
 exec --no-startup-id dex --autostart --environment i3
+
+# Screen-Lock
+bindsym $mod+l exec i3lock -n -u --image=/home/rishi/Pictures/wallpaper3.png
 
 #Auto-Exec
 exec_always --no-startup-id ~/.config/polybar/launch.sh
