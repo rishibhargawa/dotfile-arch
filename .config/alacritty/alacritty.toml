@@ -2,18 +2,17 @@
 live_config_reload=true
 
 [window]
-opacity=0.99
-padding={x=5,y=5}
+opacity=0.8
+padding={x=2,y=5}
 decorations = "None"
-blur=true
 
 [scrolling]
 history=10000
 multiplier=5
 
 [font]
-normal={family="Fira Mono",style="Regular"}
-size=8
+normal={family="RecMonoLinear Nerd Font Mono",style="Regular"}
+size=10
 
 [selection]
 save_to_clipboard=true
