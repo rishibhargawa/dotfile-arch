@@ -1,5 +1,5 @@
 * {
-    font: "Fira Sans 12";
+    font: "FreeSans 14";
     g-spacing: 10px;
     g-margin: 0;
     b-color: #000000FF;
@@ -19,7 +19,7 @@
 configuration {
     modi: "drun";
     show-icons: true;
-    display-drun: "";
+    display-drun: " ";
 }
 
 listview {

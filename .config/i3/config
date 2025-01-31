@@ -5,13 +5,13 @@
 set $mod Mod4
 
 #Font-Render
-font pango:Nunito 10
+font pango:FreeSans 10
 
 #XDG-AutoStart
 exec --no-startup-id dex --autostart --environment i3
 
 # Screen-Lock
-bindsym $mod+l exec i3lock -n --image=/home/rix/Pictures/Wallpapers/wallpaper3.png
+bindsym $mod+l exec i3lock -n --image=/home/rix/Pictures/Wallpapers/wallpaper6.png
 
 #Auto-Exec
 exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -19,6 +19,7 @@ exec_always --no-startup-id autotiling
 exec_always --no-startup-id picom
 exec_always easyeffects --gapplication-service
 exec_always --no-startup-id /home/rix/.fehbg
+
 # Volume-Keybinds
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
@@ -137,4 +138,5 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 for_window [class="^.*"] border pixel 0
-gaps inner 3
+gaps outer 1
+gaps inner 1
